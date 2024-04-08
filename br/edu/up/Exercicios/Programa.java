@@ -1,10 +1,11 @@
 package br.edu.up.Exercicios;
 
 public class Programa {
-
-    static void main(String[] args){
-
-        Exercicio02.Executar02();
+    public static void main(String[] args) {
+  
+        Exercicio01.Executar();
+        // Exercicio02.Executar();
+        // Exercicio03.Executar();
+        // Exercicio04.Executar();
     }
-
 }
