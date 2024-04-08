@@ -7,5 +7,6 @@ public class Programa {
         // Exercicio02.Executar();
         // Exercicio03.Executar();
         // Exercicio04.Executar();
+        // Exercicio06.Executar();
     }
 }
