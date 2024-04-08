@@ -13,15 +13,11 @@ public class Automovel {
     }
 
     public void setDistancia(int distancia) {
-        if (distancia > 0){
-            this.distancia = distancia;
-        }
+        this.distancia = distancia;
     }
 
     public void setCombustivel(int combustivel) {
-        if (combustivel > 0){
-            this.combustivel = combustivel;
-        }
+        this.combustivel = combustivel;
     }
 
 }
