@@ -8,7 +8,7 @@ import br.edu.up.Models.Automovel;
 
 public class Exercicio02 {
 
-    public static void Executar02(){
+    public static void Executar(){
         Scanner leitor = new Scanner(System.in);
         Automovel carro = new br.edu.up.Models.Automovel();
 
