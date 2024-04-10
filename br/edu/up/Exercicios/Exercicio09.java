@@ -18,5 +18,7 @@ public class Exercicio09 {
                 System.out.print(valor);
             }
         }
+
+        leitor.close();
     }
 }
