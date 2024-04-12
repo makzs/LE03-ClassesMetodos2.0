@@ -1,6 +1,6 @@
 package br.edu.up.Models;
 
-public class Produtos {
+public class Produto {
     private String nome;
     private double custo;
     private double venda;
