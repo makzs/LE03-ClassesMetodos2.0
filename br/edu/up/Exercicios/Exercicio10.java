@@ -4,7 +4,7 @@ package br.edu.up.Exercicios;
 //“maior de idade” e “menor de idade” para cada pessoa. Considerar a pessoa com 18anos como maior de idade.
 
 import java.util.Scanner;
-import br.edu.up.Models.Pessoas;
+import br.edu.up.Models.Pessoa;
 
 public class Exercicio10 {
 
@@ -16,7 +16,7 @@ public class Exercicio10 {
         leitor.nextLine();
 
         for (int i = 0; i < quantidade; i++){
-            Pessoas pessoa = new Pessoas();
+            Pessoa pessoa = new Pessoa();
 
             System.out.println("Informe o nome da " + (i+1) + " pessoa: ");
             pessoa.setNome(leitor.nextLine());

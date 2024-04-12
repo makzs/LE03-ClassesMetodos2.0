@@ -9,14 +9,14 @@ package br.edu.up.Exercicios;
 
 import java.util.Scanner;
 
-import br.edu.up.Models.DescontoCarros;
+import br.edu.up.Models.Desconto;
 
 public class Exercicio12 {
 
     public static void Executar(){
         Scanner leitor = new Scanner(System.in);
         boolean repetir = true;
-        DescontoCarros desconto = new DescontoCarros();
+        Desconto desconto = new Desconto();
 
         System.out.println("Carango Velho");
         System.out.println("Calculadora de descontos");
