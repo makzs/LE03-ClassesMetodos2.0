@@ -10,10 +10,6 @@ public class Pessoa {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public char getSexo() {
         return sexo;
     }
@@ -46,10 +42,6 @@ public class Pessoa {
             System.out.println(nome + " É menor de idade!");
         }
     }
-}
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
 
     public char getSaude() {
         return saude;
@@ -57,6 +49,10 @@ public class Pessoa {
 
     public void setSaude(char saude) {
         this.saude = saude;
+    }
+
+    public Pessoa (){
+        
     }
 
     public Pessoa(String nome, char sexo, int idade, char saude) {
