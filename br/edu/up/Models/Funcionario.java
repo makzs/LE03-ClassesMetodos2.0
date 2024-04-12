@@ -5,16 +5,12 @@ public class Funcionario {
     private String nome;
     private int idade;
     private char sexo;
-
-    public double getSalario() {
-        return salario;
-    }
-
+    private double salarioMinimo;
+    private double reajuste;
 
     public String getNome() {
         return nome;
     }
-
 
     public int getIdade() {
         return idade;
@@ -25,6 +21,7 @@ public class Funcionario {
         return sexo;
     }
 
+    
 
     public void setSalario(double salario) {
         this.salario = salario;
@@ -49,4 +46,52 @@ public class Funcionario {
         salario += bonus;
     }
     
+
+    public double getSalarioMinimo() {
+        return salarioMinimo;
+    }
+
+    public void setSalarioMinimo(double salarioMinimo) {
+        this.salarioMinimo = salarioMinimo;
+    }
+
+    public double getReajuste() {
+        return reajuste;
+    }
+
+    public void setReajuste(double reajuste) {
+        this.reajuste = reajuste;
+    }
+
+    public Funcionario(){
+
+    }
+
+    public Funcionario(String nome, double salario, double salarioMinimo) {
+        this.nome = nome;
+        this.salario = salario;
+        this.salarioMinimo = salarioMinimo;
+        this.reajuste = calcularReajuste();
+    }
+
+    private double calcularReajuste() {
+        if (salario < salarioMinimo * 3) {
+            return salario * 0.5;
+        } else if (salario >= salarioMinimo * 3 && salario <= salarioMinimo * 10) {
+            return salario * 0.2;
+        } else if (salario > salarioMinimo * 10 && salario <= salarioMinimo * 20) {
+            return salario * 0.15;
+        } else {
+            return salario * 0.1;
+        }
+    }
+
+    public double calcularNovoSalario() {
+        return salario + reajuste;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
 }
