@@ -2,16 +2,15 @@ package br.edu.up.Exercicios;
 
 import java.util.Scanner;
 
+import br.edu.up.Models.CalcularDesconto;
+
 public class Exercicio15 {
     public static void Executar() {
         Scanner leitor = new Scanner(System.in);
-
-        double totalDesconto = 0;
-        double totalPago = 0;
+        CalcularDesconto calculadora = new CalcularDesconto();
 
         while (true) {
-            System.out.println(
-                    "Informe o tipo de combustível do veículo (alcool, gasolina, diesel) ou digite '0' para encerrar:");
+            System.out.println("Informe o tipo de combustível do veículo (álcool, gasolina, diesel) ou digite '0' para encerrar:");
             String combustivel = leitor.nextLine().toLowerCase();
 
             if (combustivel.equals("0")) {
@@ -22,35 +21,10 @@ public class Exercicio15 {
             double valorVeiculo = leitor.nextDouble();
             leitor.nextLine();
 
-            double desconto;
-            switch (combustivel) {
-                case "alcool":
-                    desconto = valorVeiculo * 0.25;
-                    break;
-                case "gasolina":
-                    desconto = valorVeiculo * 0.21;
-                    break;
-                case "diesel":
-                    desconto = valorVeiculo * 0.14;
-                    break;
-                default:
-                    desconto = 0;
-                    System.out.println("Tipo de combustível inválido. Desconto será 0%.");
-                    break;
-            }
-
-            double valorPago = valorVeiculo - desconto;
-
-            System.out.println("Desconto: R$" + desconto);
-            System.out.println("Valor a ser pago pelo cliente:" + valorPago);
-
-            totalDesconto += desconto;
-            totalPago += valorPago;
+            calculadora.executarCalculadoraCombustivel(combustivel, valorVeiculo);
         }
 
-        System.out.println("Total de desconto concedido:" + totalDesconto);
-        System.out.println("Total pago pelos clientes:" + totalPago);
-
+        calculadora.exibirTotais();
         leitor.close();
     }
 }

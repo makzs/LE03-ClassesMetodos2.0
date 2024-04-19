@@ -1,7 +1,6 @@
 package br.edu.up.Exercicios;
 
 import java.util.Scanner;
-
 import br.edu.up.Models.Pessoa;
 
 public class Exercicio13 {

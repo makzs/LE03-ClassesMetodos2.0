@@ -3,6 +3,11 @@ package br.edu.up.Models;
 public class Pessoa {
     private String nome;
     private char sexo;
+    public Pessoa(String nome, char sexo) {
+        this.nome = nome;
+        this.sexo = sexo;
+    }
+
     private int idade;
     private char saude;
 
@@ -46,7 +51,7 @@ public class Pessoa {
     }
 
     public boolean estaApto() {
-        return (idade >= 18 && idade <= 25) && (sexo == 'M' || sexo == 'm') && saude == 'B';
+        return (idade >= 18 && idade <= 25) && (sexo == 'M' || sexo == 'm') && (saude == 'B' || saude == 'A');
     }
 
 }
