@@ -2,6 +2,8 @@ package br.edu.up.Exercicios;
 
 import java.util.Scanner;
 
+import br.edu.up.Models.Triangulo;
+
 public class Exercicio19 {
     public static void Executar() {
         Scanner leitor = new Scanner(System.in);
@@ -15,7 +17,9 @@ public class Exercicio19 {
         System.out.println("Digite o valor do terceiro lado do triângulo:");
         int lado3 = leitor.nextInt();
 
-        if (verificarTriangulo(lado1, lado2, lado3)) {
+        Triangulo triangulo = new Triangulo(lado1, lado2, lado3);
+
+        if (triangulo.verificarTriangulo()) {
             if (lado1 == lado2 && lado2 == lado3) {
                 System.out.println("Os valores formam um triângulo equilátero.");
             } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
@@ -28,9 +32,5 @@ public class Exercicio19 {
         }
 
         leitor.close();
-    }
-
-    public static boolean verificarTriangulo(int lado1, int lado2, int lado3) {
-        return (lado1 < lado2 + lado3) && (lado2 < lado1 + lado3) && (lado3 < lado1 + lado2);
     }
 }

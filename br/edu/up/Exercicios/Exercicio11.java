@@ -1,5 +1,7 @@
 package br.edu.up.Exercicios;
 
+import br.edu.up.Models.Pessoa;
+
 import java.util.Scanner;
 
 public class Exercicio11 {
@@ -16,11 +18,14 @@ public class Exercicio11 {
             System.out.println("Informe o sexo da pessoa " + i + " (M para masculino, F para feminino):");
             char sexo = leitor.nextLine().toUpperCase().charAt(0);
 
-            if (sexo == 'M') {
-                System.out.println(nome + " é homem.");
+
+            Pessoa pessoa = new Pessoa(nome, sexo);
+
+            if (pessoa.getSexo() == 'M') {
+                System.out.println(pessoa.getNome() + " é homem.");
                 totalHomens++;
-            } else if (sexo == 'F') {
-                System.out.println(nome + " é mulher.");
+            } else if (pessoa.getSexo() == 'F') {
+                System.out.println(pessoa.getNome() + " é mulher.");
                 totalMulheres++;
             } else {
                 System.out.println("Sexo inválido. Por favor, insira M para masculino ou F para feminino.");
