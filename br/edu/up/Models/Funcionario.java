@@ -1,8 +1,10 @@
 package br.edu.up.Models;
 
 public class Funcionario {
-    private String nome;
     private double salario;
+    private String nome;
+    private int idade;
+    private char sexo;
     private double salarioMinimo;
     private double reajuste;
 
@@ -10,17 +12,40 @@ public class Funcionario {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public int getIdade() {
+        return idade;
     }
 
-    public double getSalario() {
-        return salario;
+
+    public char getSexo() {
+        return sexo;
     }
+
+    
 
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    public void abono(double bonus){
+        salario += bonus;
+    }
+    
 
     public double getSalarioMinimo() {
         return salarioMinimo;
@@ -36,6 +61,10 @@ public class Funcionario {
 
     public void setReajuste(double reajuste) {
         this.reajuste = reajuste;
+    }
+
+    public Funcionario(){
+
     }
 
     public Funcionario(String nome, double salario, double salarioMinimo) {
@@ -59,6 +88,10 @@ public class Funcionario {
 
     public double calcularNovoSalario() {
         return salario + reajuste;
+    }
+
+    public double getSalario() {
+        return salario;
     }
 
 }

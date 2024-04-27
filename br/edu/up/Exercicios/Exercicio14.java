@@ -5,7 +5,7 @@ package br.edu.up.Exercicios;
 // Informe média de preço de custo e do preço de venda
 
 import java.util.Scanner;
-import br.edu.up.Models.Produtos;
+import br.edu.up.Models.Produto;
 
 public class Exercicio14 {
 
@@ -24,7 +24,7 @@ public class Exercicio14 {
         double somaVenda = 0;
 
         for (int i = 0; i < quantidade; i++){
-            Produtos produto = new Produtos();
+            Produto produto = new Produto();
 
             System.out.println("Informe o nome do " + (i+1) + " produto: ");
             produto.setNome(leitor.nextLine());

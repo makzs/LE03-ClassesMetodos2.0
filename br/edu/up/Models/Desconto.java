@@ -1,6 +1,6 @@
 package br.edu.up.Models;
 
-public class DescontoCarros {
+public class Desconto {
     private double preco;
     private int ano;
 
