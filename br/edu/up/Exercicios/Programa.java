@@ -13,7 +13,6 @@ public class Programa {
         //Exercicio08.Executar();
         //Exercicio09.Executar();
         // Exercicio10.Executar();
-<<<<<<< HEAD
         //Exercicio12.Executar();
         //Exercicio13.Executar();
         //Exercicio14.Executar();
@@ -28,9 +27,5 @@ public class Programa {
         //Exercicio23.Executar();
         //Exercicio24.Executar();
         //Exercicio25.Executar();
-=======
-        // Exercicio11.Executar();
-
->>>>>>> c3abf578f920d430c181deb876e9fe277c88c06e
     }
 }
