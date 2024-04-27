@@ -2,33 +2,21 @@ package br.edu.up.Exercicios;
 
 import java.util.Scanner;
 
+import br.edu.up.Models.Nadador;
+
 public class Exercicio21 {
-    public static void Executar() {
+    public void executar() {
         Scanner leitor = new Scanner(System.in);
+        int idade;
 
         System.out.println("Digite a idade do nadador:");
-        int idade = leitor.nextInt();
+        idade = leitor.nextInt();
 
-        String categoria = classificarNadador(idade);
+        var nadador = new Nadador(idade);
 
-        System.out.println("O nadador está na categoria: " + categoria);
+
+        System.out.println("O nadador está na categoria: " + nadador.classificarNadador());
 
         leitor.close();
-    }
-
-    public static String classificarNadador(int idade) {
-        if (idade >= 5 && idade <= 7) {
-            return "Infantil A";
-        } else if (idade >= 8 && idade <= 10) {
-            return "Infantil B";
-        } else if (idade >= 11 && idade <= 13) {
-            return "Juvenil A";
-        } else if (idade >= 14 && idade <= 17) {
-            return "Juvenil B";
-        } else if (idade >= 18 && idade <= 25) {
-            return "Sênior";
-        } else {
-            return "Idade fora da faixa etária";
-        }
     }
 }
