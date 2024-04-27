@@ -4,13 +4,13 @@ package br.edu.up.Exercicios;
 // Sabe-se que o preço de custo receberá um acréscimo de acordo com um percentual informado pelo usuário
 
 import java.util.Scanner;
-import br.edu.up.Models.Vendas;
+import br.edu.up.Models.Venda;
 
 public class Exercicio06 {
 
     public static void Executar(){
         Scanner leitor = new Scanner(System.in);
-        Vendas vendas = new Vendas();
+        Venda vendas = new Venda();
 
         System.out.println("Informe o preço de custo do produto: ");
         vendas.setPreco(leitor.nextDouble());

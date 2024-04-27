@@ -1,6 +1,6 @@
 package br.edu.up.Models;
 
-public class Vendas {
+public class Venda {
     private double preco;
     private int taxa;
 
